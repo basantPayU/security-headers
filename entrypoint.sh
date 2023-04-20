@@ -23,6 +23,7 @@ declare -A grades=(
     ['D']=3
     ['E']=2
     ['F']=1
+    ['G']=0
 )
 
 RATING=$(curl -s -L "https://securityheaders.com/?hide=on&followRedirects=$FOLLOW_REDIRECTS&q=$1" -I | sed -En 's/x-grade: (.*)/\1/p' | tr -d '\r')
